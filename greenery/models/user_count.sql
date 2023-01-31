@@ -1,3 +1,3 @@
 select 
   count(distinct user_id) 
-from public.users
+from {{ source('greenery', 'users') }}

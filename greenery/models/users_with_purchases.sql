@@ -8,7 +8,7 @@ users_with_purchases as (
 			when count(order_id) = 2 then 'two_purchases'
 			when count(order_id) >= 3 then 'three_plus_purchases'
 		end as purchase
-	from public.orders
+	from {{ source('greenery', 'orders') }}
 	group by 1
 ),
 
