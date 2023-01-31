@@ -4,4 +4,4 @@ select
     {% for payment_method in payment_methods %}
     '{{payment_method}}',
     {% endfor %}
-    1
+    {{ add_hundred(1) }}
