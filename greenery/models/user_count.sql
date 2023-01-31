@@ -1,3 +1,3 @@
 select 
-  count(distinct user_id) 
+  count(distinct user_id) as value
 from {{ source('greenery', 'users') }}
