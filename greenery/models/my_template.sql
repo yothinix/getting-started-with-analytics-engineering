@@ -2,6 +2,6 @@
 
 select
     {% for payment_method in payment_methods %}
-    '{{payment_method}}',
+    '{{payment_method}}' as {{ payment_method }}_method,
     {% endfor %}
-    {{ add_hundred(1) }}
+    {{ add_hundred(1) }} as hello
