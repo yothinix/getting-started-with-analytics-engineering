@@ -6,3 +6,5 @@ models:
     columns:
       - name: value
         description: Number of users
+        tests:
+          - not_null
