@@ -4,7 +4,7 @@ order_per_hour as (
   select 
     date_trunc('hour', created_at), 
     count(order_id) as order_per_hour
-  from {{ source('greenery', 'orders') }}
+  from {{ ref('stg_greenery__orders') }}
   group by 1
 ),
 

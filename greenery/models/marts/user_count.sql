@@ -1,4 +1,4 @@
 select 
   count(distinct user_id) as value
 
-from {{ source('greenery', 'users') }}
+from {{ ref('stg_greenery__users') }}
