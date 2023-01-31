@@ -1,6 +1,6 @@
 greenery:
   outputs:
-    dbt_zkan:
+    dbt_human:
       type: postgres
       threads: 1
       host: localhost
@@ -8,7 +8,7 @@ greenery:
       user: postgres
       pass: "{{ env_var('DBT_ENV_SECRET_PG_PASSWORD') }}"
       dbname: greenery
-      schema: dbt_zkan
+      schema: dbt_human
 
     prod:
       type: postgres
@@ -20,4 +20,4 @@ greenery:
       dbname: greenery
       schema: prod
 
-  target: dbt_zkan
+  target: dbt_human
